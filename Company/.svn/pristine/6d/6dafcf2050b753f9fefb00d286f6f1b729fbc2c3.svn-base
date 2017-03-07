@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:fitsSystemWindows="true"
+              android:layout_height="match_parent">
+	<com.hyzs.wj.hyzs_android.widget.TitleBar
+		android:id="@+id/tl_news_detail"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"/>
+	<android.support.v4.widget.SwipeRefreshLayout
+		android:id="@+id/sl_my_sell_content"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/rv_my_sell_content"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"/>
+	</android.support.v4.widget.SwipeRefreshLayout>
+	<TextView
+		android:id="@+id/tv_my_sell_emply"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:text="没有任何数据"
+		android:textColor="#999999"
+		android:textSize="20sp"
+		android:visibility="gone"/>
+</LinearLayout>

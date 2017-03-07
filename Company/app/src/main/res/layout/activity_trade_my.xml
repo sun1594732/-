@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:zhy="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#FFFFFF"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:orientation="horizontal">
+
+		<ImageView
+			android:id="@+id/back"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:padding="13dp"
+			android:src="@mipmap/back_white"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:text="详情"
+			android:textColor="@android:color/black"/>
+
+		<TextView
+			android:id="@+id/cancle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:paddingLeft="10dp"
+			android:paddingRight="12dp"
+			android:text="取消"
+			android:textColor="#1ccd9b"
+			android:textSize="13sp"/>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="0.5dp"
+			android:layout_alignParentBottom="true"
+			android:background="#BBBBBB"/>
+	</RelativeLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<com.hyzs.wj.hyzs_android.widget.overscroll.OverScrollLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1">
+
+			<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:divider="#ccc"
+					android:orientation="vertical"
+					android:paddingLeft="15dp"
+					android:paddingRight="15dp"
+					android:showDividers="middle">
+
+					<EditText
+						android:id="@+id/edtv_title"
+						style="@style/edit_style_push"
+						android:maxLength="15"
+						android:hint="物品名称"/>
+
+
+					<EditText
+						android:id="@+id/edtv_price"
+						style="@style/edit_style_push"
+						android:hint="物品价格"
+						android:digits="0123456789."
+						android:inputType="number"/>
+
+					<EditText
+						android:id="@+id/edtv_phone"
+						style="@style/edit_style_push"
+						android:hint="联系方式"
+						android:maxLength="11"
+						android:inputType="phone"/>
+
+
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<TextView
+							android:id="@+id/tv_text_pic"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="11dp"
+							android:layout_marginTop="11dp"
+							android:text="上传图片"
+							android:textColor="#999999"
+							/>
+
+						<LinearLayout
+							android:id="@+id/ll_text_pic"
+							android:layout_width="match_parent"
+							android:layout_height="62dp"
+							android:layout_marginLeft="20dp"
+							android:layout_marginRight="11dp"
+							android:layout_marginTop="14dp"
+							android:layout_toRightOf="@id/tv_text_pic"
+							android:orientation="horizontal"
+							android:weightSum="3">
+
+							<RelativeLayout
+								android:layout_width="0dp"
+								android:layout_height="match_parent"
+								android:layout_weight="1">
+
+								<ImageView
+									android:id="@+id/iv_text_add01"
+									android:layout_width="62dp"
+									android:layout_height="match_parent"
+									android:scaleType="fitXY"
+									android:src="@mipmap/add_n"/>
+							</RelativeLayout>
+
+							<RelativeLayout
+								android:layout_width="0dp"
+								android:layout_height="match_parent"
+								android:layout_weight="1">
+
+								<ImageView
+									android:id="@+id/iv_text_add02"
+									android:layout_width="62dp"
+									android:layout_height="match_parent"
+									android:scaleType="fitXY"
+									android:src="@mipmap/add_n"/>
+							</RelativeLayout>
+
+							<RelativeLayout
+								android:layout_width="0dp"
+								android:layout_height="match_parent"
+								android:layout_weight="1">
+
+								<ImageView
+									android:id="@+id/iv_text_add03"
+									android:layout_width="62dp"
+									android:layout_height="match_parent"
+									android:scaleType="fitXY"
+									android:src="@mipmap/add_n"/>
+							</RelativeLayout>
+						</LinearLayout>
+
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/ll_text_pic"
+							android:layout_marginRight="15dp"
+							android:layout_marginTop="10dp"
+							android:gravity="right"
+							android:text="*此处最多上传3张图片"
+							android:textColor="#999999"
+							android:textSize="10sp"/>
+					</RelativeLayout>
+
+					<android.support.design.widget.TextInputLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						app:counterEnabled="true"
+						app:counterMaxLength="400"
+						app:counterOverflowTextAppearance="@style/MyOverflowText"
+						app:hintTextAppearance="@style/MyOverflowHint">
+
+						<EditText
+							android:id="@+id/et_push_content"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:background="@null"
+							android:gravity="start"
+							android:hint="物品简介"
+							android:lines="8"
+							android:padding="8dp"
+							android:textColor="#333333"
+							android:textCursorDrawable="@drawable/color_cursor"
+							android:textSize="14sp"/>
+					</android.support.design.widget.TextInputLayout>
+
+
+					<!--<com.zhy.view.flowlayout.TagFlowLayout-->
+						<!--android:id="@+id/id_flowlayout"-->
+						<!--android:layout_width="fill_parent"-->
+						<!--android:layout_height="wrap_content"-->
+						<!--android:padding="10dp"-->
+						<!--zhy:auto_select_effect="false"-->
+						<!--zhy:max_select="1">-->
+					<!--</com.zhy.view.flowlayout.TagFlowLayout>-->
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_vertical"
+						android:layout_marginTop="5dp"
+						android:orientation="horizontal">
+
+						<TextView
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:background="#ffffff"
+							android:gravity="top"
+							android:padding="10dp"
+							android:text="支持交换物件"
+							android:textSize="13sp"/>
+
+						<ToggleButton
+							android:id="@+id/xiaoxi_but"
+							android:layout_width="40dp"
+							android:layout_height="20dp"
+							android:layout_gravity="center_vertical"
+							android:layout_marginRight="15dp"
+							android:background="@drawable/message_sele"
+							android:checked="false"
+							android:text=""
+							android:textOff=""
+							android:textOn=""/>
+					</LinearLayout>
+				</LinearLayout>
+			</ScrollView>
+		</com.hyzs.wj.hyzs_android.widget.overscroll.OverScrollLayout>
+
+		<Button
+			android:id="@+id/btn_commit"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_alignParentBottom="true"
+			android:layout_below="@+id/over_scroll_layout"
+			android:layout_gravity="bottom"
+			android:background="#1CCD9B"
+			android:text="发布"
+			android:textColor="#FFFFFF"
+			android:textSize="16sp"/>
+	</LinearLayout>
+</LinearLayout>

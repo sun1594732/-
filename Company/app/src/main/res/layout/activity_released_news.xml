@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true">
+
+	<com.example.dbb.widget.TitleBar
+		android:id="@+id/tl_news_detail"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"/>
+
+	<View
+		android:id="@+id/view_relesed_news_lines"
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:layout_below="@id/tl_news_detail"
+		android:background="#999999"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/view_relesed_news_lines"
+		android:background="#FFFFFF"
+		android:orientation="vertical">
+
+		<EditText
+			android:id="@+id/et_relesed_news_title"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_alignParentLeft="true"
+			android:layout_marginLeft="11dp"
+			android:layout_marginRight="11dp"
+			android:background="@null"
+			android:hint="标题"
+			android:maxLength="20"
+			android:textColorHint="#999999"
+			android:textSize="12sp"/>
+
+		<View
+			android:id="@+id/view_relesed_news_title"
+			android:layout_width="match_parent"
+			android:layout_height="0.1dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:background="#999999"/>
+
+		<EditText
+			android:id="@+id/et_relesed_news_site"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_alignParentLeft="true"
+			android:layout_marginLeft="11dp"
+			android:layout_marginRight="11dp"
+			android:background="@null"
+			android:focusable="false"
+			android:hint=""
+			android:maxLength="20"
+			android:textColor="#000000"
+			android:textColorHint="#999999"
+			android:textSize="12sp"/>
+
+		<View
+			android:id="@+id/view_relesed_news_site"
+			android:layout_width="match_parent"
+			android:layout_height="0.1dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:background="#999999"/>
+
+		<RelativeLayout
+			android:id="@+id/rl_relesed_news_content"
+			android:layout_width="match_parent"
+			android:layout_height="115dp">
+
+			<TextView
+				android:id="@+id/tv_relesed_news_contentnumber"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:layout_alignParentRight="true"
+				android:layout_marginBottom="11dp"
+				android:layout_marginRight="11dp"
+				android:text="/300"
+				android:textColor="#999999"
+				android:textSize="10sp"/>
+
+			<TextView
+				android:id="@+id/tv_relesed_news_contentnum"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:layout_marginBottom="11dp"
+				android:layout_toLeftOf="@id/tv_relesed_news_contentnumber"
+				android:text="0"
+				android:textColor="#999999"
+				android:textSize="10sp"/>
+
+			<EditText
+				android:id="@+id/et_relesed_news_content"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_alignParentLeft="true"
+				android:layout_marginLeft="11dp"
+				android:layout_toLeftOf="@id/tv_relesed_news_contentnum"
+				android:background="@null"
+				android:hint="请输入发布内容..."
+				android:maxLength="300"
+				android:textColorHint="#999999"
+				android:textSize="12sp"/>
+		</RelativeLayout>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="0.1dp"
+			android:layout_below="@id/rl_relesed_news_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:background="#999999"/>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="105dp">
+
+			<TextView
+				android:id="@+id/tv_relesed_news_pic"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="11dp"
+				android:layout_marginTop="11dp"
+				android:text="图片"
+				android:textColor="#999999"
+				android:textSize="12sp"/>
+
+			<LinearLayout
+				android:id="@+id/ll_relesed_news_pic"
+				android:layout_width="match_parent"
+				android:layout_height="62dp"
+				android:layout_marginLeft="20dp"
+				android:layout_marginRight="11dp"
+				android:layout_marginTop="14dp"
+				android:layout_toRightOf="@id/tv_relesed_news_pic"
+				android:orientation="horizontal"
+				android:weightSum="3">
+
+				<RelativeLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+
+					<ImageView
+						android:id="@+id/iv_relesed_news_add01"
+						android:layout_width="62dp"
+						android:layout_height="match_parent"
+						android:scaleType="fitXY"
+						android:src="@mipmap/ic_launcher"/>
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+
+					<ImageView
+						android:id="@+id/iv_relesed_news_add02"
+						android:layout_width="62dp"
+						android:layout_height="match_parent"
+						android:scaleType="fitXY"
+						android:src="@mipmap/ic_launcher"/>
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+
+					<ImageView
+						android:id="@+id/iv_relesed_news_add03"
+						android:layout_width="62dp"
+						android:layout_height="match_parent"
+						android:scaleType="fitXY"
+						android:src="@mipmap/ic_launcher"/>
+				</RelativeLayout>
+			</LinearLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/ll_relesed_news_pic"
+				android:layout_marginLeft="11dp"
+				android:layout_marginTop="10dp"
+				android:text="*此处最多上传3张图片"
+				android:textColor="#999999"
+				android:textSize="10sp"/>
+		</RelativeLayout>
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/bt_relesed_news_released"
+		android:layout_width="match_parent"
+		android:layout_height="47dp"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:background="#1CCD9B"
+		android:onClick="onClick"
+		android:text="发布"
+		android:textColor="#ffffff"
+		android:textSize="13sp"/>
+</RelativeLayout>

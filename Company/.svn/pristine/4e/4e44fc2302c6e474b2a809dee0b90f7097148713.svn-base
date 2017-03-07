@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_nearby_menu"
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:background="#fff"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+	<!--
+		<TextView
+			android:id="@+id/tv_nearby_menu_all"
+			android:layout_width="match_parent"
+			android:layout_height="29dp"
+			android:background="#EEEEEE"
+			android:gravity="center"
+			android:text="全部人员"
+			android:textColor="#999999"
+			android:textSize="11sp" />
+	-->
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:background="#EEEEEE"/>
+
+	<TextView
+		android:id="@+id/tv_nearby_menu_yes"
+		android:layout_width="match_parent"
+		android:layout_height="38dp"
+		android:gravity="center"
+		android:text="已经查看"
+		android:textColor="#666666"
+		android:textSize="11sp"/>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:background="#EEEEEE"/>
+
+	<TextView
+		android:id="@+id/tv_nearby_menu_no"
+		android:layout_width="match_parent"
+		android:layout_height="38dp"
+		android:gravity="center"
+		android:text="未查看"
+		android:textColor="#666666"
+		android:textSize="11sp"/>
+
+</LinearLayout>

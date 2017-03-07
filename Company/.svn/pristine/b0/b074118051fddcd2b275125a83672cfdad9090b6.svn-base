@@ -1,0 +1,17 @@
+package com.hyzs.wj.hyzs_android.trade;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import com.hyzs.wj.hyzs_android.R;
+
+
+public class TradeActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_trade);
+    }
+
+}
